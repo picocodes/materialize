@@ -1,0 +1,479 @@
+/*----------------------------------------
+    Animations
+------------------------------------------*/
+@keyframes hspin {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+    .hubaga-grid:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .col {
+        float: left;
+		padding: 15px;
+		width: 100%;
+    }
+	
+	@for $i from 1 to 10 {
+		.ps$i{ width: $(i)0%; }
+	}
+    
+    @media only screen and (min-width: 620px) {
+		@for $i from 1 to 10 {
+			.pm$i{ width: $(i)0%; }
+		}
+	}
+
+    .hubaga-btn,
+    .hubaga-btn:hover,
+    .hubaga-btn:focus,
+    .hubaga-btn:active,
+    .hubaga-gateway-radio,
+    .hubaga-gateway-radio:hover,
+    .hubaga-gateway-radio:focus,
+    .hubaga-gateway-radio:active {
+        background-color: #ff5722;
+        border: 1px solid #ff5722;
+        border-radius: 2px;
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+        color: $color_white !important;
+        font-size: 16px;
+        position: relative;
+        display: inline-block;
+        padding: 8px 24px;
+        letter-spacing: .5px;
+        transition: .2s ease-out;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .hubaga-btn:hover,
+    .hubaga-btn:focus,
+    .hubaga-btn:active {
+        background-color: #ff7e55;
+        border-color: #ff7e55;
+    }
+    
+    .hubaga-gateway-radio,
+    .hubaga-gateway-radio:hover,
+    .hubaga-gateway-radio:focus,
+    .hubaga-gateway-radio:active {
+        background-color: #2196f3;
+        border: none;
+        display: block;
+        margin-bottom: .4em;
+    }
+    
+    .hubaga-gateway-radio input,
+    .hubaga-gateway-radio:hover input,
+    .hubaga-gateway-radio:focus input,
+    .hubaga-gateway-radio:active input {
+        position: absolute !important;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        word-wrap: normal !important;
+        clip: rect(1px,1px,1px,1px);
+    }
+    
+    .hubaga-gateway-radio:hover,
+    .hubaga-gateway-radio:focus,
+    .hubaga-gateway-radio:active {
+        background-color: #51adf6;
+        border-color: #51adf6;
+    }
+    
+    .hubaga-gateway-paypal {
+        background-color: #ff5722;
+    }
+    
+    .hubaga-gateway-paypal:hover,
+    .hubaga-gateway-paypal:focus,
+    .hubaga-gateway-paypal:active {
+        background-color: #ff7e55;
+        border-color: #ff7e55;
+    }
+    
+    .hubaga-overlay-wrapper {
+        background: rgba(0,0,0,.53);
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hubaga-close {
+        background: #fff;
+        border-radius: 50%;
+        color: #ff5722;
+        font-size: 32px;
+        line-height: 42px;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    @media only screen and (max-width: 488px) {
+    	.hubaga-close {
+        	top: 0;
+        	right: 0;
+    	}   
+    }
+    
+    .hubaga-loader {
+        animation: hspin 2s linear infinite;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        border-top-color: #3498db;
+        position: relative;
+        z-index: 1001;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+    }
+    
+    .hubaga-loader:before,
+    .hubaga-loader:after {
+        animation: hspin 1.5s linear infinite;
+        border: 3px solid transparent;
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+    }
+    
+    .hubaga-loader:before {
+        border-top-color: #e74c3c;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+    }
+    
+    .hubaga-loader:after {
+        border-top-color: #f9c922;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .hubaga-instacheck-wrapper {
+        display: table;
+    }
+    
+    .hubaga-instacheck-overlay-middle {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .hubaga-instacheck-overlay {
+        background-color: #fff;
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+        position: relative;
+        z-index: 1001;
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 450px;
+        height: auto;
+        max-width: 340px;
+        margin: auto;
+        margin-top: 42px;
+        margin-left: auto;
+    }
+    
+    @media only screen and (max-width: 488px) {
+    .hubaga-instacheck-overlay-middle,
+    .hubaga-instacheck-overlay {
+        overflow: scroll;
+        min-height: 100%;
+    }
+    
+    }
+    
+    .hubaga-instacheck .hubaga-instacheck-order-complete {
+        padding: 1em;
+    }
+    
+    .hubaga-checkout-heading {
+        background: rgba(0,0,0,.06);
+        border-bottom: 1px solid #c9c6c6;
+        font-size: 1.2em;
+        padding: 1em;
+	}
+	
+	.hubaga-checkout-heading h2{
+		margin: 0;
+		font-weight: 400;
+	}
+    
+    .hubaga-checkout-form,
+    .hubaga-instacheck .hubaga-order-start {
+        padding: 2em;
+    }
+    
+   .hubaga-checkout {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        max-width: 400px;
+        margin: auto;
+    }
+    
+    .hubaga-instacheck h2{
+        margin: 0;
+    }
+    
+    .hubaga-total-div {
+        color: #3a3939;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    .hubaga-order-total {
+        color: #0aba0a;
+    }
+    
+    .hubaga-original-price {
+        color: #888;
+        margin-right: .5em;
+        text-decoration: line-through;
+    }
+    
+    .hubaga-coupon-grid {
+        display: none;
+    }
+    
+    .hubaga-coupon-grid .col {
+        padding: 0;
+        padding-bottom: 4px;
+    }
+    
+    .hubaga-coupon-grid input {
+        border-radius: 0;
+        padding: 5px 10px;
+        line-height: 1.5;
+        border: 1px solid rgba(0,0,0,0.4);
+        width: 100%;
+    }
+    
+    .hubaga-coupon-btn,
+    .hubaga-coupon-btn:hover,
+    .hubaga-coupon-btn:focus,
+    .hubaga-coupon-btn:active {
+        border-radius: 0;
+        padding: 5px 10px;
+        width: 100%;
+    }
+    
+    .hubaga-notice {
+        border-left: 3px solid #bcd9ba;
+        list-style-type: none;
+        margin: 15px 0 30px 0;
+        padding: 15px 15px 10px 15px;
+    }
+    
+    .hubaga-notice-error {
+        border-color: #f5baba;
+    }
+    
+    .hubaga-coupon-notice {
+        margin: 15px 0 30px 0;
+        padding: 3px;
+    }
+    
+    .hubaga-coupon-notices {
+        color: #f00;
+    }
+    
+    a.hubaga-logout-link,
+    a.hubaga-logout-link:hover,
+    a.hubaga-logout-link:focus,
+    a.hubaga-logout-link:active {
+        border: 1px solid #888;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-left: 1em;
+        padding: .5em;
+    }
+    
+    a.hubaga-logout-link:hover,
+    .hubaga-logout-link:focus,
+    a.hubaga-logout-link:active {
+        border-color: #a2a2a2;
+    }
+    
+    #hubaga_loginform {
+        max-width: 340px;
+        margin: auto;
+    }
+    
+    .hubaga-order-details-title,
+    .hubaga-order-downloads-title {
+        border-bottom: 2px solid rgba(0,0,0,.49);
+        padding-bottom: .5rem;
+    }
+    
+    .hubaga-order-details,
+    .hubaga-order-downloads {
+        list-style-type: none;
+    }
+    
+    .hubaga-order-download a {
+        box-shadow: 0 1px 4px 0 rgba(8, 151, 98, 0.13);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 1em;
+        padding: 1em;
+        text-decoration: none;
+    }
+    
+    .hubaga-order-detail {
+        box-shadow: 0 1px 0px 0 rgba(8, 151, 98, 0.13);
+    }
+    
+    .hubaga-orders-list {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    
+    .hubaga-orders-list .hubaga-order-list-item {
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        position: relative;
+        margin-bottom: -1px;
+        padding: .8rem 0;
+        padding-right: 54px;
+    }
+    
+    .hubaga-order-list-item .hubaga-btn {
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+    }
+    
+    .hubaga-order-list-item .order-status {
+        color: #673ab7;
+    }
+    
+    .hubaga-order-list-item.pc-completed .order-status {
+        color: #4caf50;
+    }
+    
+    .hubaga-order-list-item.pc-failed .order-status {
+        color: #e51c23;
+    }
+    
+    .hubaga-order-list-item.pc-cancelled .order-status {
+        color: #009688;
+    }
+    
+    .hubaga-order-list-item.pc-refunded .order-status {
+        color: #ffc107;
+    }
+    
+    .hubaga-order-list-item.pc-pending .order-status {
+        color: #ff5722;
+    }
+    
+    .hubaga-order-status {
+        background: #673ab7;
+        color: #fff;
+        margin: 1.5em;
+        margin-left: 0;
+        padding: 1em;
+    }
+    
+    .hubaga-order-status.pc-failed {
+        background-color: #e51c23;
+    }
+    
+    .hubaga-order-status.pc-completed {
+        background-color: #4caf50;
+    }
+    
+    .hubaga-order-status.pc-cancelled {
+        background-color: #009688;
+    }
+    
+    .hubaga-order-status.pc-refunded {
+        background-color: #ffc107;
+    }
+    
+    .hubaga-order-status.pc-pending {
+        background-color: #ff5722;
+    }
+    
+    .hubaga-product-card {
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+        position: relative;
+        width: 300px;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .hubaga-product-card-header {
+        background: #ff5722;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+        min-height: 200px;
+    }
+    
+    .hubaga-product-card-body {
+		padding: 1em;
+		padding-top: 0;
+	}
+	
+	.hubaga-product-card-body h2{
+		transform: translateY(-80px);
+    	color: #fff;
+    	margin: 0;
+		font-weight: 400;
+	}
+    
+    .hubaga-card-price {
+        background: #fff;
+        border: 2px solid #fafafa;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+        color: #ff5722;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 64px;
+        height: 64px;
+        text-align: center;
+        line-height: 64px;
+	}
+	
+	.hubaga-is-checkout .entry-header{
+		display: none;
+	}
+
+	.hubaga-is-checkout .site-main{
+		box-shadow: none;
+	}
+    
+  

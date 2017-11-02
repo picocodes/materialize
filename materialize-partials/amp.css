@@ -1,0 +1,247 @@
+
+/* Variables */
+$color: #009688;
+$color_light1: #26a69a;
+$color_light2: #4db6ac;
+$color_light3: #80cbc4;
+$color_light4: #b2dfdb;
+$color_light5: #e0f2f1;
+$color_dark1: #00897b;
+$color_dark2: #00796b;
+$color_dark3: #00695c;
+$color_dark4: #004d40;
+$color_accent1: #a7ffeb;
+$color_accent2: #64ffda;
+$color_accent3: #1de9b6;
+$color_accent4: #00bfa5;
+$color_success: #00e676;
+$color_error: #ff1744;
+$color_black: #141313;
+$color_grey: #212121;
+$color_white:#fafafa;
+
+/**
+ * 1. Set default font family to system fonts.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+ html {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+  }
+
+  /**
+ * Remove default margin.
+ */
+
+body {
+	margin: 0;
+  }
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+ a {
+	background-color: transparent;
+  }
+  
+  /**
+   * Improve readability of focused elements when they are also in an
+   * active/hover state.
+   */
+  
+  a:active,
+  a:hover {
+	outline: 0;
+  }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+ h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+  }
+
+*{
+	box-sizing:border-box
+}
+
+:after,:before{
+	box-sizing:border-box
+}
+
+html {
+	line-height: 1.5;
+	font-weight: normal;
+	color: #212121;
+	font-size: 100%;
+}
+
+body {
+	background-color: #fafafa;
+    transition: left 200ms ease;
+    position: relative;
+	font-size: 1em;
+	word-wrap: break-word;
+}
+
+a {
+	text-decoration: none;
+	color: $color;
+}
+
+a:hover{
+	color: $color_accent2;
+}
+
+a:visited,
+a:active{
+	color: $color_accent4;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 2.1rem 0 1.68rem 0;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.62em;
+	margin: 1.78rem 0 1.424rem 0;
+	font-weight: 300;
+}
+
+p {
+	font-size: 1.25em;
+	font-weight: 400;
+	margin: 0 0 30px;
+	padding: 0;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.hubaga-grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col {
+	float: left;
+	padding: 15px;
+	width: 100%;
+}
+
+@for $i from 1 to 10 {
+	.ps$i{ width: $(i)0%; }
+}
+
+@media only screen and (min-width: 620px) {
+	@for $i from 1 to 10 {
+		.pm$i{ width: $(i)0%; }
+	}
+}
+
+.btn,
+button{
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  background-color: $color;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: $color_white;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+button:focus,
+.btn:focus{
+  outline: none;
+  background-color: $color_dark1;
+}
+
+.btn:hover,
+button:hover{
+  background-color: $color_dark2;
+}
+
+.site-inner {
+	background: $color_white;
+}
+
+.container{
+	margin: 0 auto;
+	max-width: 1024px;
+	width: 90%;
+}
+
+@media only screen and (min-width: 601px) {
+	.container {
+		width: 85%;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+		width: 90%;
+	}
+}
+
+.feature-section {
+	background: #009688;
+    background: -webkit-gradient(linear,left top,right top,from(#4db6ac),color-stop(#009688),color-stop(#00897b),color-stop(#00897b),to(#00897b));
+    background: linear-gradient(90deg,#4db6ac,#009688,#00897b,#00897b,#00897b);
+    color: #fafafa;
+    min-height: 400px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+
+	.btn {
+    	background-color: rgba(0, 0, 0, 0.25) !important;
+		color: rgba(255,255,255,0.75) !important;
+	}
+	h1{
+		margin: 0;
+		font-size: 4em;
+		@media only screen and (min-width: 620px) {
+			font-size: 8em;
+			margin: 2.1rem 0 1.68rem;
+		}
+	}
+	h2{
+		@media only screen and (min-width: 620px) {
+			font-size: 2.5em;
+		}
+	}
+}
+
+.hero-text {
+    font-size: 1.3em;
+    font-weight: 300;
+}

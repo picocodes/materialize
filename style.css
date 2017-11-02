@@ -1,0 +1,38 @@
+/*
+Theme Name: Materialize By Hubaga 1
+Theme URI: https://hubaga.com
+Author: hubaga
+Author URI: https://hubaga.com
+Description: Custom theme for Hubaga
+Version: 1.0.0
+Text Domain: hubaga
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+*/
+
+/* Variables */
+@import "materialize-partials/variables.css";
+
+/* Modified version of normalize.css */
+@import "materialize-partials/normalize.css";
+
+/* HTML tags */
+@import "materialize-partials/tags.css";
+
+/* Buttons */
+@import "materialize-partials/buttons.css";
+
+/* Forms */
+@import "materialize-partials/input.css";
+
+/* Navigations */
+@import "materialize-partials/nav.css";
+
+/* Layout */
+@import "materialize-partials/layout.css";
+
+/* Utility classes */
+@import "materialize-partials/utils.css";
+
+/* Hubaga */
+@import "materialize-partials/hubaga.css";

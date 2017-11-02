@@ -1,0 +1,92 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	padding: 0.375em;
+	width: 100%;
+	border: 1px solid #e9e7e7;
+}
+
+.hubaga-label {
+	height: 35px;
+	position: relative;
+	color: #2e2b2b;
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.hubaga-label > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: 300;
+	line-height: 32px;
+	color: #2e2b2b;
+	border-bottom: 1px solid #586A82;
+	transition: border-bottom-color 200ms ease-in-out;
+	cursor: text;
+	pointer-events: none;
+}
+
+.hubaga-label > span span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 0% 50%;
+	transition: transform 200ms ease-in-out;
+	cursor: text;
+}
+
+.hubaga-label .hubaga-field.hubaga-is-focused + span span,
+.hubaga-label .hubaga-field:not(.hubaga-is-empty) + span span {
+	transform: translateY(-20px);
+	font-weight: 500;
+  cursor: default;
+}
+
+.hubaga-label .hubaga-field.hubaga-is-focused + span {
+  border-bottom-color: $color;
+}
+
+.hubaga-field {
+	font-weight: 300;
+	border: 0 !important;
+	background: transparent;
+	color: $color_grey;
+	outline: none;
+	cursor: text;
+	display: block;
+	width: 100%;
+	line-height: 32px;
+	padding-bottom: 3px !important;;
+	transition: all 200ms ease-in-out;
+}
+
+.hubaga-field::placeholder {
+	color: #2e2b2b;
+}
+
+.hubaga-field.hubaga-is-empty:not(.hubaga-is-focused) {
+  opacity: 0;
+}
+
+.search-form{
+	position: relative;
+}
+
+.search-submit{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 36px;
+	padding: 0;
+}
+
+.search-submit svg{
+	fill: $color_white;
+}

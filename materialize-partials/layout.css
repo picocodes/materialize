@@ -1,0 +1,94 @@
+.site-inner {
+	background: $color_white;
+}
+
+.container,
+.main-content,
+.sidebar-primary {
+	margin: 0 auto;
+	max-width: 1024px;
+	width: 90%;
+}
+
+.site-content {
+	margin-top: 64px; /* offsets fixed header */
+}
+
+.sidebar-widget {
+	margin-top: 1rem;
+	width: 300px;
+	max-width: 100%;
+}
+
+.sidebar-widget:not(.hubaga_widget_product/*Which already has a border*/) {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	padding: 1rem;
+}
+
+#footer-widget {
+	padding-top: 1em;
+}
+
+@media only screen and (min-width: 601px) {
+	.container,
+	.main-content,
+	.sidebar-primary {
+		width: 85%;
+	}
+
+	.site-content {
+		margin-top: 72px;
+	}
+
+	.footer-widget-area {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+
+	.footer-widget-area:after,
+	.site-content:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.footer-widget {
+		float: left;
+		padding: 0 0.75rem;
+		min-height: 1px;
+		width: 50%;
+	}
+
+	.site-main {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		padding: 1rem;
+		margin-top: 1rem;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+		width: 90%;
+	}
+
+	.footer-widget {
+		width: 33.33333%;
+	}
+
+	.sidebar-primary {
+		float: left;
+		width: 40%;
+		padding: 0 0.75rem;
+		min-height: 1px;
+	}
+
+	.main-content {
+		width: 70%;
+	}
+
+	.has-sidebar .main-content {
+		width: 60%;
+		float: left;
+	}
+}
